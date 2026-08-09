@@ -2,6 +2,28 @@
 
 This file tracks the changes introduced by gittuf versions.
 
+## v0.16.0
+
+This release adds support for SHA-256 Git repositories and reworks gittuf's
+storage interface to enable compatibility with server repositories that do not
+use the Git binary as their storage backend.
+
+### Added
+
+- Significant functionality upgrades in the TUI
+- Persistent cache in gittuf is now automatically enabled when initializing the
+  root of trust or cloning a repository
+- Inspection commands for both root of trust and policy file metadata (improved
+  from previously-removed root inspection command)
+- WithRecordSigningKeyBytes and WithAnnotateSigningKeyBytes added to the API
+
+### Updated
+
+- Fixed HTTP connection not being closed after querying Fulcio
+- Updated various CLI docstrings and tests
+- Significant testing improvements
+- Updated various dependencies and CI workflows
+
 ## v0.15.0
 
 This release contains performance and significant testing improvements across
